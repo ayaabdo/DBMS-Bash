@@ -1,0 +1,125 @@
+#!/bin/bash 
+
+cd DBs
+function Create_DB(){ 
+    if test -d $1
+    then
+       echo "$1 is already exists!"
+    else
+        mkdir $1 
+        echo "Database $1 has been created successfully!"
+    fi
+}
+
+Use_DB(){
+  if test -d $1
+  then
+       cd $1
+       echo "Done."
+       MainTables
+  else
+     echo "$1 doesn't exist!"
+  fi
+}
+
+Drop_DB(){
+   if test -d $1
+    then
+        rm -r $1
+        echo "Database $1 has been removed successfully!"
+  else
+     echo "$1 doesn't exist!"
+  fi
+}
+
+Show_DBs(){
+    if [ "$(ls -A)" ]
+    then
+        ls
+    else
+        echo "No Databases to show!"
+    fi 
+}
+
+Create_table(){
+    echo "create table"
+}
+Show_tables()
+{
+    echo "show tables"
+}
+Drop_table()
+{
+    echo "drop table"
+}
+
+ReadDbNameFromUSer(){
+    echo "Enter Database name: "
+	read DBname
+}
+ReadTableNameFromUSer(){
+    echo "Enter Table name: "
+	read Tablename
+}
+MainDB(){  
+   local c
+   select choice in 'Create Database' 'Open Datsbase' 'Drop Database' 'List Database'
+   do 
+      case $REPLY in 
+           1) ReadDbNameFromUSer
+              Create_DB $DBname 
+              ;;
+           2) ReadDbNameFromUSer
+              Use_DB $DBname 
+              ;;
+           3) ReadDbNameFromUSer
+              echo "Are you sure? y|n "
+              read c
+              if [ $c = "y" ]
+              then
+                    Drop_DB $DBname  
+              else
+                   continue
+              fi
+              ;;
+           4) Show_DBs 
+              ;;
+            esac
+            echo "Would u like to continue? y|n "
+            read c
+            if [ $c = "n" ]
+            then
+                exit 0        
+            fi
+        done
+}
+MainTables()
+{
+    local c
+    select choice in 'Create Table' 'Show Tables' 'Drop Table'
+    do 
+      case $REPLY in 
+           1)ReadTableNameFromUSer
+             Create_table $Tablename
+             ;;
+           2)Show_tables 
+             ;;
+           3) ReadTableNameFromUSer
+              echo "Are you sure? y|n "
+              read c
+              if [ $c = "y" ]
+              then
+                    Drop_table $Tablename
+              else
+                  continue
+              fi
+        esac
+        echo "Would u like to continue? y|n "
+        read c
+        if [ $c = "n" ]
+        then
+            exit 0        
+        fi
+   done
+}
+MainDB
