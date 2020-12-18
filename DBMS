@@ -410,4 +410,3 @@ function Record_stage
 
 
 MainDB
-#InsertInto $Tablename
