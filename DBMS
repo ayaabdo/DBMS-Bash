@@ -20,6 +20,10 @@ function Create_DB
         zenity --info --title="success" --text="Database $DBname has been created successfully :)" --no-wrap
     fi
 
+<<<<<<< HEAD
+=======
+    #MainDB
+>>>>>>> 65443274a133a8c39d3f26d7fbaf6cdc10691418
 }
 
 function Open_DB
@@ -35,6 +39,10 @@ function Open_DB
         zenity --error --title="Error!" --text="$DBname doesn't exist!" --no-wrap
     fi
 
+<<<<<<< HEAD
+=======
+    #MainDB
+>>>>>>> 65443274a133a8c39d3f26d7fbaf6cdc10691418
 }
 
 function Drop_DB
@@ -56,7 +64,12 @@ function Drop_DB
     else
         zenity --error --title="Error!" --text="$DBname doesn't exist!" --no-wrap
     fi  
+<<<<<<< HEAD
      
+=======
+
+    #MainDB       
+>>>>>>> 65443274a133a8c39d3f26d7fbaf6cdc10691418
 }
 
 function list_DBs
@@ -98,6 +111,10 @@ function Open_Certain_table
         zenity --error --title="Error!" --text="$Tablename doesn't exist!" --no-wrap
     fi
 
+<<<<<<< HEAD
+=======
+    #MainTables
+>>>>>>> 65443274a133a8c39d3f26d7fbaf6cdc10691418
 }
 
 function Create_table
@@ -228,6 +245,7 @@ function Drop_table
         zenity --error --title="Error!" --text="$Tablename Table doesn't exist!" --no-wrap
     fi  
 
+<<<<<<< HEAD
 }
 function DescribeTable
 {
@@ -250,6 +268,14 @@ function SortTableByPk
             fi
       ((idx++))
       done
+=======
+   # MainTables
+}
+function DescribeTable
+{
+    cat $Tablename > .TableContent
+    whiptail --title "$Tablename" --fb --scrolltext --textbox .TableContent 12 80
+>>>>>>> 65443274a133a8c39d3f26d7fbaf6cdc10691418
 }
 #### Auxiliary function, Reading table name from the user #################### 
 function ReadTableNameFromUSer
@@ -318,7 +344,11 @@ function InsertInto
                                                 zenity --error --title="Error!" --text="PK can't be NULL ! \n " --no-wrap
                                                 data=$(whiptail --inputbox "Enter valid Primary key" 8 39 3>&1 1>&2 2>&3)
 
+<<<<<<< HEAD
                                         elif ! [[ $data =~ ^[1-9][0-9]+$ ]]
+=======
+                                        elif ! [[ $data =~ ^[0-9]+$ ]]
+>>>>>>> 65443274a133a8c39d3f26d7fbaf6cdc10691418
                                         then
                                                 zenity --error --title="Error!" --text="Invalid data type! \n " --no-wrap
                                                 data=$(whiptail --inputbox "Enter valid data type (int)" 8 39 3>&1 1>&2 2>&3)
@@ -464,8 +494,11 @@ function Update_cell
                 if [[ "$colConstraint" == "PK" ]]
                 then
                         zenity --error --title="Error!" --text="It is not allowed to update a Primary key" --no-wrap
+<<<<<<< HEAD
                         unset colFound
                         colFound=0
+=======
+>>>>>>> 65443274a133a8c39d3f26d7fbaf6cdc10691418
                         break
                 fi
                 
@@ -485,7 +518,11 @@ function Update_cell
     then 
         zenity --info --title="Success!" --text="Cell updated successfully" --no-wrap
     else
+<<<<<<< HEAD
         zenity --error --title="Error!" --text="Error updating $colname" --no-wrap
+=======
+        zenity --info --title="Success!" --text="$colname doesn't exist!" --no-wrap
+>>>>>>> 65443274a133a8c39d3f26d7fbaf6cdc10691418
     fi
 
 }
