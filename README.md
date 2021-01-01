@@ -1,4 +1,4 @@
-<h1>Project Descriptiom<h1>
+# **Project Description**
 Database Management System using Bash scripting with very simple GUI.. In this simple DBMS you will be able to do the following :
 
 (1) Database Level:
@@ -26,11 +26,11 @@ Update Certain Cell
 Back to Tables Menu
 Exit
 
-<h1>General Instructions<h1>
+# **General Instructions**
 
 If you are in Show table option or show available databases .. to press Ok .. you need to press Tab first and then press Ok.
 
-<h1> DBMS will prevent you to do the following: <h1>
+# **DBMS will prevent you to do the following:**
 
 Enter (0) in the primary key field.
 Enter dublicate primary key.
