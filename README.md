@@ -28,7 +28,7 @@ Database Management System using Bash scripting with very simple GUI.. In this s
 
 # **General Instructions**
 
-### If you are in Show table or List All Tables options .. to press Ok .. you need to press Tab first and then press Ok.
+If you are in Show table or List All Tables options .. to press Ok .. you need to press Tab first and then press Ok.
 
 # **DBMS will prevent you to do the following:**
 
