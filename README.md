@@ -1,30 +1,30 @@
 # **Project Description**
 Database Management System using Bash scripting with very simple GUI.. In this simple DBMS you will be able to do the following :
 
-## **(1) Database Level:**
+## 1) Database Level:
 
-    Create Database
-    Open DataBase
-    Drop Database
-    List Database
-    Exit
+    1- Create Database
+    2- Open DataBase
+    3- Drop Database
+    4- List Database
+    5- Exit
 
-## **(2) Table Level:**
+## 2) Table Level:
 
-    List All Tables
-    Open Certain Table
-    Drop Table
-    Back To DB Menu
-    Exit
+    1- List All Tables
+    2- Open Certain Table
+    3- Drop Table
+    4- Back To DB Menu
+    5- Exit
 
-# **(3) Record Level:**
+## 3) Record Level:
 
-    Show table
-    Insert New Record
-    Delete Record
-    Update Certain Cell
-    Back to Tables Menu
-    Exit
+    1- Show table
+    2- Insert New Record
+    3- Delete Record
+    4- Update Certain Cell
+    5- Back to Tables Menu
+    6- Exit
 
 # **General Instructions**
 
