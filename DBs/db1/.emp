@@ -1,0 +1,4 @@
+Column Name|Type|Primary Key
+id|int|PK
+name|str|
+age|int|

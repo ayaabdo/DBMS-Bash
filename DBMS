@@ -246,6 +246,7 @@ function SortTableByPk
             then
                  let m=$idx-1
                  sort -k $m -n $Tablename > tmp && mv tmp $Tablename
+                 #zenity --info --title="PK!" --text="$m Table doesn't exist!" --no-wrap
                 break
             fi
       ((idx++))
