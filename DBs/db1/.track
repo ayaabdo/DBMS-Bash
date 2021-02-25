@@ -1,4 +1,0 @@
-Column Name|Type|Primary Key
-name|str|
-id|int|PK
-dept|str|
