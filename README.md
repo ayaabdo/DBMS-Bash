@@ -35,3 +35,5 @@ If you are in Show table or List All Tables options .. to press Ok .. you need t
     1- Enter (0) in the primary key field.
     2- Enter dublicate primary key.
     3- Insert DB name or Table name that you already exists (Ex: Two DBs with the same name).
+
+![image](bash_run.png)
